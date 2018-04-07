@@ -8,4 +8,6 @@ This repository contains Benson's codes to implement the three-neuron two-layer 
 
 Note that the tansig function cannot be used in the CPLEX as it makes the model non-linear, even if the exponent is approximated by the Taylor Series. Instead, `y = x / (0.5 + |x|)` is used as the sigmoid function, with the single y variable replaced by two y varibles to handle the `abs()` condition. Also, the weights and bias are pre-defined with the assumption that they can be trained by offline Machine Learning. 
 
+Before running `threeNNCPLEX.java`, CPLEX java packages need to be imported and IDE settings should be confirgured properly. Please refer to this [video](https://www.youtube.com/watch?v=51CcmaISSX0&t=231s) to set up.
+
 *04/07/2018*
