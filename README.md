@@ -1,9 +1,11 @@
 # threeNeuronTest
 
-This repository contains Benson's codes to implement the three-neuron two-layer network based on Michele Lombardi's [demonstration](http://cp2013.a4cp.org/slides/175.pdf). 
+This repository contains Benson's codes to implement the three-neuron two-layer network based on Michele Lombardi's [demonstration](https://www.researchgate.net/profile/Michele_Lombardi/publication/270891264_A_New_Propagator_for_Two-Layer_Neural_Networks_in_Empirical_Model_Learning/links/54b7fdc20cf28faced616f55.pdf). To get familiar with the neuron constraints principle behind the codes, please refer to `demonstration.PNG`.
 
-*by Benson, 03/19/2018*
+*03/19/2018*
 
-To get familiar with the principle behind this code, please refer to the `demonstration.PNG`.
+`threeNNCPLEX.java` is updated to simulate the three-neuron network by using the IBM CPLEX java package. It solves two network respectively with the linear and sigmoid function in the first layer. The linear network is solved but the sigmoid function needs improvement by using the `OptimalGlobal` offered by the latest CPLEX package to solve this non-convex model. An example can be previewed in the `GlobalQPex1.java`. 
 
-Before running the code on Python, please ensure you have installed the `numpy` and `random` packages.
+Note that the tansig function cannot be used in the CPLEX as it makes the model non-linear, even if the exponent is approximated by the Taylor Series. Instead, `y = x / (0.5 + |x|)` is used as the sigmoid function, with the single y variable replaced by two y varibles to handle the `abs()` condition. Also, the weights and bias are pre-defined with the assumption that they can be trained by offline Machine Learning. 
+
+*04/07/2018*
