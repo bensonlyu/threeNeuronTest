@@ -1,0 +1,19 @@
+# This .dat file contains the defined values for a three neuron network
+# implemented in the AMPL IDE.
+# 
+# Beichen Lyu, unbenson.lyu@gmail.com
+# 05/12/2018
+
+#assigned by user 
+param xInput := 2;
+param neuronInput := 2;
+
+#prepared by off-line data training
+param weightsFirst: 1  2 :=
+                 1  1 -1
+			     2  1  1;
+
+param weightsSecond :=
+                    1 1
+					2 1;
+			

@@ -1,0 +1,25 @@
+# This .run file contains the processing algorithms for a three neuron network
+# implemented in the AMPL IDE.
+# 
+# Beichen Lyu, unbenson.lyu@gmail.com
+# 05/12/2018
+
+#reset the AMPL environment
+reset;
+
+#load the model
+model threeNeuronTest.mod;
+
+#load the data
+data threeNeuronTest.dat;
+
+#decide the solver (optional, default for nonlinear model is MINOS)
+option solver minos;
+
+#solve
+solve;
+
+#display results
+display _varname, _var; #variables
+display _objname, _obj; #objective
+display _conname, _con; #constraints
