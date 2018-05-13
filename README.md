@@ -11,3 +11,11 @@ Note that the tansig function cannot be applied in the CPLEX as it makes the mod
 Before running `threeNNCPLEX.java`, CPLEX java packages need to be imported and IDE settings should be configured properly. Please refer to this [video](https://www.youtube.com/watch?v=51CcmaISSX0&t=231s) to crank up.
 
 *04/07/2018*
+
+A set of `threeNeuronTest` files (`.run`, `.mod`, `.dat`) has been uploaded with non-linear actiavtion functions solved by using the [MINOS solver](https://web.stanford.edu/group/SOL/guides/minos55.pdf) included in the [AMPL](https://ampl.com/products/solvers/all-solvers-for-ampl/) IDE, whose library integrates a group of versatile solvers targeting various problem types.
+
+To run the program, please [download](https://ampl.com/products/ampl/ampl-for-students/#Demo) the free demo version AMPL IDE and set it up by following its instructions. After changing the IDE workspace to the directory where three `threeNeuronTest` files are saved, type 'include threeNeuronTest.run' in the console and you should be able to see the similar results shown in the `sampleOutput.txt` file.
+
+Future updates may include the [Java api](https://ampl.com/api/latest/java/index.html) used to run the program outside the (antique) IDE and allow data processing in a larger scale.
+
+*05/12/2018*
